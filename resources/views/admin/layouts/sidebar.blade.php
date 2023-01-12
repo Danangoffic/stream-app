@@ -25,7 +25,8 @@
               <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                   data-accordion="false">
                   <li class="nav-item">
-                      <a href="{{ route('admin.dashboard') }}" class="nav-link">
+                      <a href="{{ route('admin.dashboard') }}"
+                          class="nav-link @if (\Route::is('admin.dashboard')) active @endif">
                           <i class="nav-icon fas fa-tachometer-alt"></i>
                           <p>
                               Dashboard
@@ -34,7 +35,8 @@
                   </li>
 
                   <li class="nav-item">
-                      <a href="pages/widgets.html" class="nav-link">
+                      <a href="{{ route('admin.transaction') }}"
+                          class="nav-link @if (\Route::is('admin.transaction')) active @endif">
                           <i class="nav-icon fas fa-shopping-cart"></i>
                           <p>
                               Transactions
@@ -43,10 +45,19 @@
                   </li>
 
                   <li class="nav-item">
-                      <a href="{{ route('admin.movie') }}" class="nav-link">
+                      <a href="{{ route('admin.movie') }}"
+                          class="nav-link @if (\Route::is('admin.movie')) active @endif">
                           <i class="nav-icon fas fa-video"></i>
                           <p>
                               Movies
+                          </p>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="{{ route('admin.logout') }}" class="nav-link">
+                          <i class="nav-icon fas fa-sign-out-alt"></i>
+                          <p>
+                              Logout
                           </p>
                       </a>
                   </li>

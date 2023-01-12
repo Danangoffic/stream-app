@@ -17,4 +17,24 @@ class Transaction extends Model
         'transaction_code',
         'status'
     ];
+
+    /**
+     * Get the package associated with the Transaction
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
+     */
+    public function package()
+    {
+        return $this->belongsTo(Package::class);
+    }
+
+    /**
+     * Get the user associated with the Transaction
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

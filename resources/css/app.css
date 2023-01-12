@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.side-link {
+    @apply flex items-center font-normal text-stream-gray text-base w-full p-4 rounded-2xl gap-[10px] transition-all;
+}
+
+.side-link.active {
+    @apply bg-softpur font-semibold text-white shadow-md shadow-blue-500/50;
+}
+
+.li-benefits {
+    @apply font-medium text-base text-stream-dark capitalize;
+}
+
+.pricing-card {
+    @apply flex flex-col p-[30px] bg-white rounded-2xl w-full lg:w-[330px] md:max-w-max lg:max-w-[330px]
+    hover:transition-shadow hover:duration-150 ease-in-out hover:shadow-2xl hover:shadow-gray-100 hover:drop-shadow-2xl;
+}
+
+.side-link:not(.active):hover{
+    @apply bg-slate-800 text-white font-semibold transition-all shadow-md shadow-blue-500/50;
+}
